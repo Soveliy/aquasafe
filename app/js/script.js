@@ -3,8 +3,13 @@ $('.slick-slider').slick({
   cssEase: 'linear'
 });
    
-  
 
+$('.calc-result__close').on('click', function() {
+    $(".calc-result").addClass("js-hide");
+});
+$('.calc__button').on('click', function() {
+    $(".calc-result").removeClass("js-hide");
+});
     // var isVisibilite = $(".section__shops_city_popup").hasClass("on");
     // console.log(isVisibilite);
 

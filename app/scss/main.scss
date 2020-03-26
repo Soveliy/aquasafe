@@ -27,11 +27,15 @@ $robotoC:'Roboto Condensed', sans-serif;
 .header{
     background: url(../images/backgrounds/header.jpg) center bottom no-repeat;
     background-size: cover;
-
+    position: relative;
+    overflow: hidden;
+    .inner{
+        max-width: 1372px;
+    }
     &__logo{
         width: 244px;
         height: 112px;
-        margin: 0 auto;
+        margin: 0 auto 192px;
 
         a{
             height: 100%;
@@ -40,6 +44,31 @@ $robotoC:'Roboto Condensed', sans-serif;
             background-position: center top;
             background-repeat: no-repeat;
         }
+    }
+    &__image{
+        max-width: 100%;
+    }
+    &__row{
+        align-items: center;
+        display: flex;
+    }
+
+    &__aqv{
+        margin-left: 104px;
+        margin-right: -126px;
+        flex-shrink: 0;
+    }
+
+    &__text{
+        font-size: 48px;
+        line-height: 64px;
+        margin-top: 10px;
+        color: #333f48;
+        font-weight: bold;
+    }
+    .left_side{
+        padding-bottom: 282px;
+        box-sizing: border-box;
     }
 }
 
@@ -93,6 +122,10 @@ $robotoC:'Roboto Condensed', sans-serif;
                 display: block;
                 opacity: 1;
             }
+
+            > .substance__elem{
+                opacity: 0;
+            }
         }
 
 
@@ -123,6 +156,15 @@ $robotoC:'Roboto Condensed', sans-serif;
 
     }
     &__item-popup{
+
+        &::before{
+            content: '';
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            top: -50px;
+            left: 0;
+        }
         display: none;
         position: absolute;
         left: 50%;
@@ -176,7 +218,18 @@ $robotoC:'Roboto Condensed', sans-serif;
 }
 .reduces-stress{
     padding: 26px 0;
-
+    position: relative;
+    background-color: #e6eff6;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    
+    }
     &__image{
         display: block;
         max-width: 100%;
@@ -210,6 +263,7 @@ $robotoC:'Roboto Condensed', sans-serif;
 .calc-block{
     position: relative;
     z-index: 300;
+    margin-bottom: 135px;
     margin-top: -66px;
     .inner{
         max-width: 860px;
@@ -325,7 +379,14 @@ $robotoC:'Roboto Condensed', sans-serif;
     }
 }
 .calc-result{
+
+    &.js-hide{
+        position: absolute;
+        top: -10000em;
+    }
     position: relative;
+    width: 100%;
+    left: 0;
     box-sizing: border-box;
     padding: 75px 56px;
     overflow: hidden;
@@ -442,7 +503,39 @@ $robotoC:'Roboto Condensed', sans-serif;
 
     
 }
-  
+
+.instructions{
+    padding: 100px 0;
+    background-color: #e8ecf0;
+    .inner{
+        max-width: 860px;
+    }
+    &__list{
+        margin-top: 50px;
+    }
+    &__item{
+        position: relative;
+        padding-left: 50px;
+        font-size: 19px;
+        line-height: 32px;
+        color: #000000;
+
+        &:before{
+            content: '';
+            position: absolute;
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 9px #d0dbe4;
+            background-color: #00477a;
+            left: 14px;
+            top:11px;
+        }
+    }
+    &__item +  &__item{
+        margin-top: 25px;
+    }
+}
 @keyframes rotation1 {
  from {   transform: rotate(292deg) translateX(300px) rotate(-292deg);}
  to {  transform: rotate(652deg) translateX(300px) rotate(-652deg); }
@@ -899,7 +992,153 @@ $robotoC:'Roboto Condensed', sans-serif;
     opacity: 1;
     display: block;
   }
+  @media screen and (max-width:1440px) and (min-width:1025px) and (min-height:600px){
+    .header{
+        &__logo{
+            margin: 0 auto 15px;
+        }
+        .inner{
+            max-width: 1112px;
+        }
+        &__text{
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: bold;
+        }
+        &__aqv{
+            max-width: 559px;
+            margin: 0;
+            margin-right: 30px;
+        }
+        .left_side{
+            padding-right: 70px;
+            padding-bottom: 70px;
+        }
+    }
+    .section-title{
+        font-size: 36px;
+        line-height: 39px;
 
+        br{
+            display: none;
+        }
+    }
+    .section-desc{
+        font-size: 19px;
+        line-height: 32px;
+        margin: 20px auto 0;
+    }
+    .counteract{
+        padding: 87px 0;
+
+       
+    }
+    .substance{
+        &__container{
+            height: 345px;
+            width: 345px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    
+    .do-not-needed{
+        padding: 69px 0 37px;
+        &__image{
+            max-width: 760px;
+        }
+    }
+    .reduces-stress{
+
+        &__video-container{
+            margin-top: 25px;
+        }
+
+        &__image{
+            max-width: 650px;
+        }
+    }
+    .calc-block{
+        margin-top: 115px;
+
+        .inner{
+            max-width: 800px;
+        }
+    }
+    .calc{
+        padding: 52px 25px 40px;
+
+
+        h2{
+            i{
+                display: block;
+            }
+        }
+
+        &__row{
+            margin-top: 62px;
+        }
+
+        &__item-container{
+            margin-bottom: 31px;
+        }
+
+        &__button{
+            max-width: 170px;
+        }
+    }
+    .calc-result{
+        padding: 75px 25px;
+
+        &__sliders{
+            height: 400px;
+        }
+        .slick-slider .item{
+            height: 400px;
+            img{
+                max-height: 400px;
+            }
+        }
+
+        &__button{
+            max-width: 170px;
+            margin-top: 25px;
+        }
+    }
+    .instructions{
+        padding: 85px 0;
+
+        .inner{
+            max-width: 815px;
+        }
+
+        &__item+&__item{
+            margin-top: 20px;
+        }
+    }
+    @keyframes rotation1 {
+        from {   transform: rotate(292deg) translateX(170px) rotate(-292deg);}
+        to {  transform: rotate(652deg) translateX(170px) rotate(-652deg); }
+       }
+       @keyframes rotation2 {
+           from { transform: rotate(210deg) translateX(170px) rotate(-210deg);}
+           to {  transform: rotate(570deg) translateX(170px) rotate(-570deg); }
+          }
+       
+       @keyframes rotation3 {
+           from { transform: rotate(0) translateX(170px) rotate(0);}
+           to {  transform: rotate(360deg) translateX(170px) rotate(-360deg); }
+       }
+       @keyframes rotation4 {
+           from { transform: rotate(147deg) translateX(170px) rotate(-147deg);}
+           to {  transform: rotate(507deg) translateX(170px) rotate(-507deg); }
+       }
+       @keyframes rotation5 {
+           from { transform: rotate(80deg) translateX(170px) rotate(-80deg);}
+           to {  transform: rotate(440deg) translateX(170px) rotate(-440deg); }
+       }
+  }
 @media screen and (min-width:1025px){
     .on__mobile{
         display: none;
@@ -907,6 +1146,207 @@ $robotoC:'Roboto Condensed', sans-serif;
 }
 
 @media screen and (max-width:1024px){
+    .header{
+        &__logo{
+            margin: 0 auto 60px;
+        }
+        .inner{
+            padding: 0 20px;
+        }
+        &__text{
+            font-size: 44px;
+            line-height: 56px;
+        }
+        &__row{
+            flex-direction: column;
+        }
+        .left_side{
+            padding: 0;
+            text-align: center;
+        }
+        &__aqv{
+            margin: 70px auto 0;
+            max-width: 100%;
+        }
+    }
+    .inner{
+        max-width: 100%;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    .section-desc{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .counteract{
+        &__substance{
+            margin-top: 74px;
+        }
+    }
+    .substance{
+        &__container{
+            height: 450px;
+            width: 450px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &__elem{
+
+            &--center{
+                text-align: left;
+            }
+        }
+    }
+    .substance__item.substance__item--zink{
+        padding: 0 120px 0 40px;
+        .substance__elem-icon{
+            left: auto;
+            right: 0;
+        }
+        &:hover{
+            padding: 0;
+        }
+    }
+
+    @keyframes rotation1 {
+        from {   transform: rotate(292deg) translateX(215px) rotate(-292deg);}
+        to {  transform: rotate(292deg) translateX(215px) rotate(-292deg); }
+       }
+       @keyframes rotation2 {
+           from { transform: rotate(210deg) translateX(215px) rotate(-210deg);}
+           to {  transform: rotate(210deg) translateX(215px) rotate(-210deg); }
+          }
+       
+       @keyframes rotation3 {
+           from { transform: rotate(0) translateX(150px) rotate(0);}
+           to {  transform: rotate(0) translateX(150px) rotate(0); }
+       }
+       @keyframes rotation4 {
+           from { transform: rotate(147deg) translateX(215px) rotate(-147deg);}
+           to {  transform: rotate(147deg) translateX(215px) rotate(-147deg); }
+       }
+       @keyframes rotation5 {
+           from { transform: rotate(80deg) translateX(215px) rotate(-80deg);}
+           to {  transform: rotate(80deg) translateX(215px) rotate(-80deg); }
+       }
+       .do-not-needed{
+           padding: 90px 0;
+
+           &__image{
+               max-width: 100%;
+           }
+       }
+       .reduces-stress{
+           padding: 125px 0;
+       }
+       .calc-block{
+           margin-top: 235px;
+           .inner{
+               padding: 0;
+           }
+           &__content{
+               border: none;
+               box-shadow: none;
+               border-radius: 0;
+           }
+       }
+       .calc-info{
+        box-sizing: border-box;
+        padding: 0 40px;
+        &__title{
+            text-align: center;
+            font-size: 48px;
+            line-height: 51px;
+            span{
+                font-size: 200px;
+                line-height: 167px;
+                display: block;
+            }
+           
+        }
+        &__text{
+            margin: 31px auto 50px;
+        }
+       }
+       .calc{
+           margin:65px 0 ;
+
+           &__row{
+               margin-right: 0;
+               box-sizing: border-box;
+               padding: 0 40px;
+               flex-direction: column;
+           }
+
+           &__item-container{
+               width: 100%;
+               padding-right: 0;
+           }
+           &__label{
+               font-size: 32px;
+               line-height: 35px;
+           }
+           &__input,&__select{
+               height: 100px;
+               font-size: 32px;
+               line-height: 35px;
+           }
+           &__button{
+               max-width: 480px;
+               font-size: 32px;
+               line-height: 35px;
+               padding: 31.5px 20px;
+           }
+       }
+       .calc-result{
+           padding: 0 80px 55px;
+           &__row{
+            flex-direction: column-reverse;
+           }
+          
+           &__title{
+            font-size: 48px;
+            line-height: 51px;
+           }
+           &__item{
+               font-size: 24px;
+               line-height: 27px;
+               padding: 17px 0;
+           }
+           &__sliders{
+               margin-top: 35px;
+               width: 100%;
+               height: 100%;
+               margin-right: 0;
+           }
+           .slick-slider .item{
+               height: 400px;
+               img{
+                   max-height: 400px;
+               }
+           }
+           .slick-slider{
+               .slick-arrow{
+                   height: 33px;
+                   width: 20px;
+                   background-size: contain;
+                   background-repeat: no-repeat;
+               }
+               .slick-prev{
+                   margin-top: -10px;
+               }
+           }
+           &__button{
+               margin-top: 40px;
+               width: 100%;
+               font-size: 32px;
+               line-height: 35px;
+               padding: 31.5px 20px;
+               max-width: 100%;
+           }
+       }
     #wrapper{
         overflow: hidden;
     }
@@ -916,11 +1356,54 @@ $robotoC:'Roboto Condensed', sans-serif;
     .on__desktop{
         display: none;
     }
+    .counteract{
+        padding: 76px 0;
+    }
     
 }
 
 @media screen and (max-width:768px){
-   
+    .substance__item--cuprum{
+        .substance__item-popup{
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+    .substance__item--chloramine {
+        .substance__item-popup{
+            left: auto;
+            right: -90px;
+            transform: translateX(0);
+        }
+    }
+    .substance__item-popup{
+        width: 300px;
+       
+    }
+    .substance__item--zink{
+        .substance__item-popup{
+            left: -60px;
+        }
+    }
+    .substance__item--plumbum{
+        .substance__item-popup{
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+    .substance__item--chlorine {
+        .substance__item-popup{
+          
+            transform: translateX(-53%);
+        }
+    }
+    .substance__item-popup{
+        padding: 20px;
+    }
+    .substance__elem-desc{
+        font-size: 15px;
+        line-height: 20px;
+    }
     .section__shops_type ul{
         display: flex;
         flex-direction: column;
@@ -954,7 +1437,79 @@ $robotoC:'Roboto Condensed', sans-serif;
 
 }
 @media screen and (max-width:600px){
-   
+    .header{
+
+        &__logo{
+            width: 180px;
+            height: 83px;
+            margin: 0 auto 30px;
+        }
+        &__aqv{
+            margin: 30px auto 0;
+        }
+    }
+    .substance{
+        &__container{
+            height: 300px;
+            width: 300px;
+        }
+        &__item{
+            height: 30px;
+            padding: 0 10px 0 60px;
+        }
+        &__elem{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        &__elem-icon{
+            height: 50px;
+            width: 50px;
+            margin-top: -25px;
+            img{
+                max-width: 100%;
+            }
+        }
+        
+    }
+    .substance__item.substance__item--zink{
+        padding: 0 60px 0 10px;
+        .substance__elem-icon{
+            left: auto;
+            right: 0;
+        }
+    }
+    
+    .substance__item:hover{
+        width: 50px;
+
+        > .substance__elem{
+         opacity: 0;
+        }
+    }
+    .substance__item.substance__item--zink:hover .substance__item.substance__item--zink{
+        margin-left: -30px;
+    }
+    @keyframes rotation1 {
+        from {   transform: rotate(292deg) translateX(130px) rotate(-292deg);}
+        to {  transform: rotate(292deg) translateX(130px) rotate(-292deg); }
+       }
+       @keyframes rotation2 {
+           from { transform: rotate(210deg) translateX(130px) rotate(-210deg);}
+           to {  transform: rotate(210deg) translateX(130px) rotate(-210deg); }
+          }
+       
+       @keyframes rotation3 {
+           from { transform: rotate(0) translateX(100px) rotate(0);}
+           to {  transform: rotate(0) translateX(100px) rotate(0); }
+       }
+       @keyframes rotation4 {
+           from { transform: rotate(147deg) translateX(130px) rotate(-147deg);}
+           to {  transform: rotate(147deg) translateX(130px) rotate(-147deg); }
+       }
+       @keyframes rotation5 {
+           from { transform: rotate(80deg) translateX(130px) rotate(-80deg);}
+           to {  transform: rotate(80deg) translateX(130px) rotate(-80deg); }
+       }
     
     .section__shops_city_popup  h2{
         font-size: 24px;
@@ -979,12 +1534,125 @@ $robotoC:'Roboto Condensed', sans-serif;
     .improvement{margin-top: -170px;}
     
     
-    .title{
+    .section-title,.header__text{
         font-size: 28px;
         line-height: 34px;
     }
-   
+    .section-desc{
+        font-size: 17px;
+        line-height: 24px;
+        margin: 15px auto 0;
+    }
+    .inner{
+        padding: 0 20px;
+    }
+    .counteract{
+        padding: 37.5px 0;
+    }
+    .do-not-needed{
+        padding: 45px 0;
+    }
+    .reduces-stress{
+        
+        padding: 62.5px 0;
 
+        &__video-container{
+            margin-top: 25px;
+        }
+        &__video-bg{
+            height: 125px;
+        }
+        
+    }
+    .calc-block{
+        margin-top: 120px;
+        margin-bottom: 70px;
+    }
+   
+    .calc-info{
+        padding: 0 20px;
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+
+            span{
+                font-size: 100px;
+                line-height: 80px;
+            }
+            b{
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+    }
+    .calc{
+        margin: 32.5px 0 0;
+        padding: 30px 20px;
+
+        &__row{
+            padding: 0;
+        }
+        &__label{
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__input,&__select{
+            height: 50px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &__button{
+            padding: 14px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+    .calc-result{
+        padding: 70px 20px 22.5px;
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+        }
+        &__item{
+            font-size: 17px;
+            line-height: 25px;
+            span:nth-child(1){
+                margin-right: 50px;
+            }
+        }
+        &__sliders{
+            margin-top: 20px;
+            height: 300px;
+        }
+        .slick-slider{
+            .item{
+                height: 300px;
+                img{
+                    max-height: 300px;
+                }
+            }
+        }
+        &__button{
+            padding: 14px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+        
+    }
+    .instructions{
+        padding: 50px 0;
+        &__list{
+            margin-top: 25px;
+        }
+        &__item{
+            font-size: 17px;
+            line-height: 25px;
+        }
+        &__item +  &__item{
+            margin-top: 10px;
+        }
+    }
     
 
     
@@ -995,6 +1663,7 @@ $robotoC:'Roboto Condensed', sans-serif;
             font-size: 14px;
             line-height: 20px;
         }
+       
     }
     
 }

@@ -18,13 +18,23 @@
 </head>
 <body>
     <div id="wrapper">
-        <!-- <header class="header" id="header">
+        <header class="header" id="header">
             <div class="inner">
                 <div class="header__logo">
                     <a href="/" style="background-image: url(images/logo.png);"></a>
                 </div>
+                <div class="header__row">
+                    <div class="left_side">
+                        <img class="header__image" src="images/aquaSafe.png" alt="">
+                        <p class="header__text">
+                            Делает водопроводную воду
+                            безопасной для рыб
+                        </p>
+                    </div>
+                    <img class="header__aqv" src="images/aquarium.png" alt="">
+                </div>
             </div>
-        </header> -->
+        </header>
         <main>
            <section class="counteract">
             <div class="inner">
@@ -132,7 +142,7 @@
                     С Tetra AquaSafe вы забудете о всех неудобствах отстаивания воды в ведрах, постоянно путающихся под ногами. Вам не придется томительно ожидать следующего дня, чтобы наконец сделать подмену своим любимым питомцам. Кондиционер моментально делает водопроводную воду пригодной
                     для жизни рыб, чем экономит ваше время и силы.
                 </p>
-                <img src="images/basins.jpg" alt="" class="do-not-needed__image">
+                <img src="images/basins.jpg" alt="" class="do-not-needed__image wow zoomIn " data-wow-delay="0.3s" data-wow-duration="2s">
             </div>
            </section>
             <!--end do-not-needed-->
@@ -147,14 +157,14 @@
                 </div>
                 <div class="reduces-stress__video-container">
                     <div class="reduces-stress__video-bg">
-                        <video width="100%" height="auto" preload="auto" autoplay="autoplay"
-                        loop="loop" poster="bg/daisy-stock-poster.jpg">
+                        <video  preload autoplay
+                        loop muted poster="images/video-bg.jpg">
                             <source src="video/video.mp4" type="video/mp4"></source>
                            
                         </video>
                     </div>
                     <div class="inner">
-                        <img class="reduces-stress__image" src="images/antistress-img.png" alt="">
+                        <img class="reduces-stress__image wow zoomIn" data-wow-delay="0.3s" data-wow-duration="2s" src="images/antistress-img.png" alt="">
                     </div>
                 </div>
             </section>
@@ -173,50 +183,50 @@
                         </div>
                         <div class="calc">
                             <h2 class="section-title">
-                                Рассчитайте, сколько AquaSafe
+                                Рассчитайте, сколько AquaSafe <i></i>
                                 потребуется вам
                             </h2>
                             <div class="calc__row">
                                 <div class="calc__item-container">
-                                    <label class="calc__label" for="volume">
+                                    <label class="calc__label" >
                                         Объем аквариума, л
                                     </label>
                                     <input class="calc__input" id="volume__input" type="text" name="volume">
                                 </div>
                                 <div class="calc__item-container">
-                                    <label class="calc__label" for="percent">
+                                    <label class="calc__label" >
                                         Процент подменяемой воды
                                     </label>
                                     <select name="percent" id="percent__select"  class="calc__select">
-                                        <option value="">
+                                        <option value="10%">
                                             10%
                                         </option>
-                                        <option value="">
+                                        <option value="20%">
                                             20%
                                         </option>
-                                        <option value="">
+                                        <option value="30%">
                                             30%
                                         </option>
-                                        <option value="">
+                                        <option value="40%">
                                             40%
                                         </option>
-                                        <option value="">
+                                        <option value="50%">
                                             50%
                                         </option>
                                     </select>
                                 </div>
                                 <div class="calc__item-container">
-                                    <label class="calc__label" for="frequency">
+                                    <label class="calc__label" >
                                         Частота подмен
                                     </label>
                                     <select name="frequency" id="frequency__select"  class="calc__select">
-                                        <option value="">
+                                        <option value="1 раз в неделю">
                                             1 раз в неделю
                                         </option>
-                                        <option value="">
+                                        <option value="1 раз в 2 недели">
                                             1 раз в 2 недели
                                         </option>
-                                        <option value="">
+                                        <option value="1 раз в месяц">
                                             1 раз в месяц
                                         </option>
                                     </select>
@@ -232,8 +242,11 @@
 
                             </div>
                             <div class="calc-result__row">
+                                <a href="#" class="calc-result__button on__mobile">
+                                    Купить
+                                </a>
                                 <div class="calc-result__sliders">
-                                    <div class="slick-slider active">
+                                    <div class="slick-slider">
                                         <div class="item">
                                             <img src="images/product-images/5l/704183_front.jpg" alt="">
                                         </div>
@@ -245,7 +258,7 @@
                                         </div>
                                         
                                     </div>
-                                    <div class="slick-slider">
+                                    <div class="slick-slider active">
                                         <div class="item">
                                             <img src="images/product-images/50ml/198852_bpfv.jpg" alt="">
                                         </div>
@@ -293,6 +306,18 @@
                                         </div>
                                         
                                     </div>
+                                    <div class="slick-slider">
+                                        <div class="item">
+                                            <img src="images/product-images/5l/704183_front.jpg" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/product-images/5l/704183_pfv.jpg" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/product-images/5l/704183_rear.jpg" alt="">
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                                 <div class="calc-result__content">
                                     <h2 class="calc-result__title">
@@ -301,22 +326,23 @@
                                     <ul class="calc-result__list">
                                         <li class="calc-result__item">
                                             <span>Кондиционер</span>
-                                            <span id="">AquaSafe</span>
+                                            <span >AquaSafe</span>
                                         </li>
                                         <li class="calc-result__item">
                                             <span>Объем</span>
-                                            <span id="">500 мл</span>
+                                            <span >500 мл</span>
                                         </li>
                                         <li class="calc-result__item">
                                             <span>Количество</span>
-                                            <span id="">1 шт.</span>
+                                            <span >1 шт.</span>
                                         </li>
                                     
                                     </ul>
-                                    <a href="#" class="calc-result__button">
+                                    <a href="#" class="calc-result__button on__desktop">
                                         Купить
                                     </a>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -536,7 +562,7 @@
             
             <section class="section section__shops">
                 <div class="container">
-                    <h2 class="title  shops__title">
+                    <h2 class="section-title  shops__title">
                         Где купить
                     </h2>
                     <!-- <div class="section__shops_type">
@@ -4283,7 +4309,49 @@
                 </div>
             </section>
              <!-- section__shops-->
-           
+            <section class="instructions">
+                <div class="inner">
+                    <h2 class="section-title">
+                        Инструкция по применению
+                    </h2>
+                    <ul class="instructions__list">
+                        <li class="instructions__item">
+                            Используйте AquaSafe для защиты рыбок каждый раз при подменах или добавлении воды.
+                        </li>
+                        <li class="instructions__item">
+                            Кондиционер Tetra AquaSafe нужно хорошо встряхнуть перед использованием.
+
+                        </li>
+                        <li class="instructions__item">
+                            При запуске нового аквариума Tetra AquaSafe добавляется в воду до внесения препаратов с живыми бактериями и размещения живых организмов.
+
+                        </li>
+                        <li class="instructions__item">
+                            На каждые 10 литров свежей водопроводной воды нужно отмерить 5 мл кондиционера Tetra AquaSafe (Crusta AquaSafe, ReptoSafe, Goldfish AquaSafe).
+
+                        </li>
+                        <li class="instructions__item">
+                            Синее окрашивание воды быстро проходит при соблюдении дозировки.
+                        </li>
+                        <li class="instructions__item">
+                            Tetra AquaSafe можно применять в аквариумах с пресной и морской водой. В морских аквариумах Tetra AquaSafe используется для быстрой акклиматизации новых рыб и их транспортировке, на время применения препарата необходимо выключить флотатор.
+
+                        </li>
+                        <li class="instructions__item">
+                            Для уменьшения стресса у рыб во время транспортировки добавьте каплю Tetra AquaSafe в транспортировочный пакет с водой.
+
+                        </li>
+                        <li class="instructions__item">
+                            Препарат сохраняет все свои свойства после вскрытия, подлежит хранению при комнатной температуре до окончания срока годности. Срок годности Tetra AquaSafe указан на дне бутылочки в формате 01/22 (месяц/год). Перед сроком годности указан номер партии из шести цифр.
+                        </li>
+                    </ul>
+                    
+
+
+
+                </div>
+            </section>
+            <!-- end instructions-->
             <div class="subfooter"></div>
         </main>
         <!--end main-->
@@ -4306,6 +4374,42 @@
         <script src="js/script.js"></script>
         <script>
              new WOW().init();
+        </script>
+        <script src="./js/dose_calc.js"></script>
+        <script>
+            const slider_items = [...document.querySelectorAll(".slick-slider")];
+            const sliders = {
+                50: slider_items[0],
+                100: slider_items[1],
+                250: slider_items[2],
+                500: slider_items[3],
+                5000: slider_items[4]
+            }
+            document.querySelector(".calc__button").addEventListener("click", ()=>{
+                const aqua_volume = document.querySelector("#volume__input").value;
+                if(!aqua_volume) return;
+                const water_replace_percent = document.querySelector("#percent__select").value;
+                const replace_frequency = document.querySelector("#frequency__select").value;
+                const {size, amount} = calculate_dose({aqua_volume, water_replace_percent, replace_frequency});
+                
+                const calc_items = document.querySelectorAll(".calc-result__item");
+                calc_items[1].querySelectorAll("span")[1].innerText = `${size} мл`;
+                calc_items[2].querySelectorAll("span")[1].innerText = `${amount} шт.`;
+
+                deactivate_sliders();
+                sliders[size].classList.add("active");
+     
+
+            });
+
+
+            function deactivate_sliders(){
+                slider_items.forEach((slider)=>{
+                    if(slider.classList.contains("active"))
+                        slider.classList.remove("active");
+                })
+            }
+ 
         </script>
         
 </body>
