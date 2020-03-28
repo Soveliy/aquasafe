@@ -88,44 +88,48 @@ $robotoC:'Roboto Condensed', sans-serif;
         width: 601px;
         border-radius: 50%;
         background: url(../images/substance--round.png) center center no-repeat;
+        transition-delay: 1s;
 
-        &:hover{
+        &.active:hover{
 
             .substance__item{
+                
                 animation-play-state: paused;
             }
         }
+       
     }
 
     
     &__item{
-        position: relative;
         box-sizing: border-box;
-        height: 49px;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 0px 20px 0px rgba(0, 71, 122, 0.15);
-        border-radius: 24px;
-        padding: 0 40px 0 120px;
         position: absolute;
         top: 50%;
         left: 50%;
         margin-top: -24.5px;
         margin-left: -50px;
-        transition: .3s;
+        transition:width,padding .3s;
         cursor: pointer;
 
-        &:hover{
-            width: 104px;
-            padding: 0;
-            z-index: 350;
-            .substance__item-popup{
-                display: block;
-                opacity: 1;
-            }
+        &.zIndex{
+            z-index: 800;
+        }
 
+        > .substance__elem{
+            border-radius: 24px;
+            display: block;
+            padding: 0 40px 0 120px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 20px 0px rgba(0, 71, 122, 0.15);
+            transition: transform .3s, opacity .1s;
+           
+        }
+
+        &:hover{
             > .substance__elem{
+                transform: translateX(-100px);
                 opacity: 0;
-            }
+            }      
         }
 
 
@@ -134,22 +138,22 @@ $robotoC:'Roboto Condensed', sans-serif;
             // margin-top: -21px;
            
            
-            animation: rotation1 10s linear infinite;
+            animation: rotation1 14s linear infinite;
            
         }
         &--cuprum{
-            animation: rotation2 10s linear infinite;
+            animation: rotation2 14s linear infinite;
         }
 
         &--zink{
-            animation: rotation3 10s linear infinite;
+            animation: rotation3 14s linear infinite;
         }
         &--plumbum{
-            animation: rotation4 10s linear infinite;
+            animation: rotation4 14s linear infinite;
         }
 
         &--chlorine{
-            animation: rotation5 10s linear infinite;
+            animation: rotation5 14s linear infinite;
         }
 
         
@@ -167,7 +171,7 @@ $robotoC:'Roboto Condensed', sans-serif;
         }
         display: none;
         position: absolute;
-        left: 50%;
+        left: 20%;
         width: 441px;
         transform: translateX(-50%);
         border-radius: 20px;
@@ -176,8 +180,7 @@ $robotoC:'Roboto Condensed', sans-serif;
         padding: 50px 30px 35px;
         z-index: 200;
         margin-top: 40px;
-        opacity: 0;
-        transition:.3s;
+        
         
     }
     
@@ -190,6 +193,7 @@ $robotoC:'Roboto Condensed', sans-serif;
         margin-top: -52.5px;
         z-index: 250;
     }
+    
     &__elem{
         font-size: 22px;
         line-height: 49px;
@@ -217,9 +221,13 @@ $robotoC:'Roboto Condensed', sans-serif;
     }
 }
 .reduces-stress{
-    padding: 26px 0;
+    padding: 90px 0 26px;
     position: relative;
     background-color: #e6eff6;
+    p,h2{
+        position: relative;
+        z-index: 10;
+    }
     &::before{
         content: '';
         position: absolute;
@@ -230,6 +238,7 @@ $robotoC:'Roboto Condensed', sans-serif;
         background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
     
     }
+    
     &__image{
         display: block;
         max-width: 100%;
@@ -614,12 +623,16 @@ $robotoC:'Roboto Condensed', sans-serif;
   .section {
     margin: 50px 0;
   }
+  .section__shops-head{
+      justify-content: space-between;
+  }
+  .section-shops-desc{
+      font-size: 19px;
+      line-height: 32px;
+  }
   .section__shops_city {
     display: -webkit-box;
     display: flex;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #b5bec4;
   }
   .section__shops_type {
     margin-bottom: 30px;
@@ -747,11 +760,11 @@ $robotoC:'Roboto Condensed', sans-serif;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 20px;
+    
     position: relative;
-    overflow-y: auto;
+   
     height: 100%;
-
+    padding: 20px;
 
  }
  .city__popup-wrapper{
@@ -760,7 +773,9 @@ $robotoC:'Roboto Condensed', sans-serif;
      width: 100%;
      margin: 0 auto;
      position: relative;
-     padding: 35px 20px;
+     padding: 45px 20px;
+     overflow-y: auto;;
+     height: calc(100% - 40px);
  }
   .section__shops_city_popup_overlay.on {
     visibility: visible;
@@ -828,6 +843,7 @@ $robotoC:'Roboto Condensed', sans-serif;
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
+    margin-bottom: 80px;
   }
   .section__shops_filter_search {
     position: relative;
@@ -896,8 +912,8 @@ $robotoC:'Roboto Condensed', sans-serif;
     border-radius: 0 4px 4px 0;
   }
   .section__shops_filter_type_item.on {
-    border: 1px solid #6b7c88;
-    background-color: #6b7c88;
+    border: 1px solid #343f48;
+    background-color: #343f48;
     color: #fff;
   }
   .section__shops_filter_type span {
@@ -1044,10 +1060,13 @@ $robotoC:'Roboto Condensed', sans-serif;
     }
     
     .do-not-needed{
-        padding: 69px 0 37px;
+        padding: 69px 0 45px;
         &__image{
             max-width: 760px;
         }
+    }
+    .reduces-stress__video-bg video {
+        margin-top: -100px;
     }
     .reduces-stress{
 
@@ -1146,6 +1165,31 @@ $robotoC:'Roboto Condensed', sans-serif;
 }
 
 @media screen and (max-width:1024px){
+
+    .section-title,.header__text,.calc-result__title,.calc__label{
+        font-family: $roboto;
+        font-weight: 500;
+    }
+    .btn-load{
+        margin: 20px auto;
+    }
+    .section__shops{
+        .container{
+            padding: 0;
+        }
+    }
+    .section__shops_box--list_item{
+        padding: 20px;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+    .section__shops_filter{
+        margin-bottom: 0;
+    }
+    .section-shops-desc{
+        font-size: 17px;
+        line-height: 25px;
+    }
     .header{
         &__logo{
             margin: 0 auto 60px;
@@ -1199,17 +1243,23 @@ $robotoC:'Roboto Condensed', sans-serif;
             }
         }
     }
+    
     .substance__item.substance__item--zink{
-        padding: 0 120px 0 40px;
         .substance__elem-icon{
             left: auto;
             right: 0;
+
+           
         }
-        &:hover{
-            padding: 0;
+        > .substance__elem{
+            padding: 0 120px 0 40px;
         }
     }
-
+    .substance__item.substance__item--zink:hover > .substance__elem{
+        transform: translateX(100px);
+    }
+   
+    
     @keyframes rotation1 {
         from {   transform: rotate(292deg) translateX(215px) rotate(-292deg);}
         to {  transform: rotate(292deg) translateX(215px) rotate(-292deg); }
@@ -1267,7 +1317,7 @@ $robotoC:'Roboto Condensed', sans-serif;
            
         }
         &__text{
-            margin: 31px auto 50px;
+            margin: 15px auto 35px;
         }
        }
        .calc{
@@ -1372,7 +1422,7 @@ $robotoC:'Roboto Condensed', sans-serif;
     .substance__item--chloramine {
         .substance__item-popup{
             left: auto;
-            right: -90px;
+            right: -5px;
             transform: translateX(0);
         }
     }
@@ -1403,6 +1453,12 @@ $robotoC:'Roboto Condensed', sans-serif;
     .substance__elem-desc{
         font-size: 15px;
         line-height: 20px;
+    }
+    .section__shops-head{
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
     .section__shops_type ul{
         display: flex;
@@ -1455,7 +1511,7 @@ $robotoC:'Roboto Condensed', sans-serif;
         }
         &__item{
             height: 30px;
-            padding: 0 10px 0 60px;
+           
         }
         &__elem{
             font-size: 16px;
@@ -1472,20 +1528,20 @@ $robotoC:'Roboto Condensed', sans-serif;
         
     }
     .substance__item.substance__item--zink{
-        padding: 0 60px 0 10px;
+        > .substance__elem{
+            padding: 0 60px 0 10px;
+        }
         .substance__elem-icon{
             left: auto;
             right: 0;
         }
     }
-    
-    .substance__item:hover{
-        width: 50px;
+    .substance__item > .substance__elem{
+        padding: 0 10px 0 60px;
 
-        > .substance__elem{
-         opacity: 0;
-        }
+
     }
+   
     .substance__item.substance__item--zink:hover .substance__item.substance__item--zink{
         margin-left: -30px;
     }
@@ -1547,14 +1603,18 @@ $robotoC:'Roboto Condensed', sans-serif;
         padding: 0 20px;
     }
     .counteract{
-        padding: 37.5px 0;
+        padding: 45px 0;
+
+        &__substance{
+            margin-top: 25px;
+        }
     }
     .do-not-needed{
         padding: 45px 0;
     }
     .reduces-stress{
         
-        padding: 62.5px 0;
+        padding: 62.5px 0 50px;
 
         &__video-container{
             margin-top: 25px;
@@ -1565,7 +1625,7 @@ $robotoC:'Roboto Condensed', sans-serif;
         
     }
     .calc-block{
-        margin-top: 120px;
+        margin-top: 50px;
         margin-bottom: 70px;
     }
    
@@ -1587,7 +1647,7 @@ $robotoC:'Roboto Condensed', sans-serif;
     }
     .calc{
         margin: 32.5px 0 0;
-        padding: 30px 20px;
+        padding: 45px 20px;
 
         &__row{
             padding: 0;
@@ -1595,6 +1655,9 @@ $robotoC:'Roboto Condensed', sans-serif;
         &__label{
             font-size: 16px;
             line-height: 20px;
+        }
+        &__item-container{
+            margin-bottom: 15px;
         }
 
         &__input,&__select{
@@ -1606,6 +1669,10 @@ $robotoC:'Roboto Condensed', sans-serif;
             padding: 14px;
             font-size: 17px;
             line-height: 20px;
+            margin: 20px auto 0;
+        }
+        &__row{
+            margin-top: 25px;
         }
     }
     .calc-result{
@@ -1613,8 +1680,10 @@ $robotoC:'Roboto Condensed', sans-serif;
         &__title{
             font-size: 28px;
             line-height: 34px;
+            margin-bottom: 20px;
         }
         &__item{
+            padding: 10px 0;
             font-size: 17px;
             line-height: 25px;
             span:nth-child(1){
@@ -1637,6 +1706,7 @@ $robotoC:'Roboto Condensed', sans-serif;
             padding: 14px;
             font-size: 17px;
             line-height: 20px;
+            max-width: 80%;
         }
         
     }

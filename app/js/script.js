@@ -7,14 +7,46 @@ $('.slick-slider').slick({
 $('.calc-result__close').on('click', function() {
     $(".calc-result").addClass("js-hide");
 });
+
+
+$(".substance__item").hover(function(){
+    $(this).children().next().next().delay(100).toggle(300);
+    $(this).toggleClass("zIndex")
+});
 $('.calc__button').on('click', function() {
     $(".calc-result").removeClass("js-hide");
 });
+
+// $(".substance__container").hover(function(){
+//     setTimeout(() => {
+//         $(e.currentTarget).addClass('is-active');
+//     }, 500)
+// });
+
+    
+    $(".substance__container").hover(function(){
+        // $(this).toggleClass("slower")
+        setTimeout(function() { 
+            $(".substance__container").toggleClass("active");
+        }, 300);
+        });
+
     // var isVisibilite = $(".section__shops_city_popup").hasClass("on");
     // console.log(isVisibilite);
 
-   
+ 
+    // $("#chloramine").velocity({
+    //     transform: "rotate(692deg)",
 
+    // }, {
+    //     /* Velocity's default options */
+    //     duration: 14000,
+    //     queue: "",
+    //     loop: false,
+    //     mobileHA: false
+    // });
+
+    
   // Переключение типа Магазина
 $('.jsTypeShops').on('click', function() {
   const jsTypeShops = $('.jsTypeShops');

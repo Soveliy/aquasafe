@@ -6,7 +6,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimized" content="320">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i|Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i|Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -47,7 +47,7 @@
                 </p>
                 <div class="counteract__substance substance ">
                     <div class="substance__container d-flex flex-column align-items-start rotation">
-                        <div class="substance__item substance__item--chloramine d-flex">
+                        <div class="substance__item substance__item--chloramine d-flex" id="chloramine">
                             <div class="substance__elem-icon">
                                 <img src="images/elements/1.png" alt="">
                             </div>
@@ -63,7 +63,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="substance__item substance__item--cuprum d-flex">
+                        <div class="substance__item substance__item--cuprum d-flex" id="cuprum">
                             <div class="substance__elem-icon">
                                 <img src="images/elements/2.png" alt="">
                             </div>
@@ -79,7 +79,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="substance__item substance__item--zink d-flex">
+                        <div class="substance__item substance__item--zink d-flex" id="zink">
                             <div class="substance__elem-icon">
                                 <img src="images/elements/3.png" alt="">
                             </div>
@@ -95,7 +95,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="substance__item substance__item--plumbum d-flex">
+                        <div class="substance__item substance__item--plumbum d-flex" id="plumbum">
                             <div class="substance__elem-icon">
                                 <img src="images/elements/4.png" alt="">
                             </div>
@@ -111,7 +111,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="substance__item substance__item--chlorine d-flex">
+                        <div class="substance__item substance__item--chlorine d-flex" id="chlorine">
                             <div class="substance__elem-icon">
                                 <img src="images/elements/5.png" alt="">
                             </div>
@@ -164,7 +164,7 @@
                         </video>
                     </div>
                     <div class="inner">
-                        <img class="reduces-stress__image wow zoomIn" data-wow-delay="0.3s" data-wow-duration="2s" src="images/antistress-img.png" alt="">
+                        <img class="reduces-stress__image  "  src="images/antistress-img.png" alt="">
                     </div>
                 </div>
             </section>
@@ -191,7 +191,7 @@
                                     <label class="calc__label" >
                                         Объем аквариума, л
                                     </label>
-                                    <input class="calc__input" id="volume__input" type="text" name="volume">
+                                    <input class="calc__input" id="volume__input" value="100" type="text" name="volume">
                                 </div>
                                 <div class="calc__item-container">
                                     <label class="calc__label" >
@@ -246,25 +246,15 @@
                                     Купить
                                 </a>
                                 <div class="calc-result__sliders">
+                                   
                                     <div class="slick-slider">
-                                        <div class="item">
-                                            <img src="images/product-images/5l/704183_front.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/product-images/5l/704183_pfv.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/product-images/5l/704183_rear.jpg" alt="">
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="slick-slider active">
-                                        <div class="item">
-                                            <img src="images/product-images/50ml/198852_bpfv.jpg" alt="">
-                                        </div>
                                         <div class="item">
                                             <img src="images/product-images/50ml/198852_front.jpg" alt="">
                                         </div>
+                                        <div class="item">
+                                            <img src="images/product-images/50ml/198852_bpfv.jpg" alt="">
+                                        </div>
+                                       
                                         <div class="item">
                                             <img src="images/product-images/50ml/198852_front_1.jpg" alt="">
                                         </div>
@@ -272,11 +262,12 @@
                                     </div>
                                     <div class="slick-slider">
                                         <div class="item">
-                                            <img src="images/product-images/100ml/762732_bpfv.jpg" alt="">
-                                        </div>
-                                        <div class="item">
                                             <img src="images/product-images/100ml/762732_front.jpg" alt="">
                                         </div>
+                                        <div class="item">
+                                            <img src="images/product-images/100ml/762732_bpfv.jpg" alt="">
+                                        </div>
+                                        
                                         <div class="item">
                                             <img src="images/product-images/100ml/762732_rear.jpg" alt="">
                                         </div>
@@ -284,23 +275,25 @@
                                     </div>
                                     <div class="slick-slider">
                                         <div class="item">
-                                            <img src="images/product-images/250ml/762749_bpfv.jpg" alt="">
-                                        </div>
-                                        <div class="item">
                                             <img src="images/product-images/250ml/762749_front.jpg" alt="">
                                         </div>
+                                        <div class="item">
+                                            <img src="images/product-images/250ml/762749_bpfv.jpg" alt="">
+                                        </div>
+                                        
                                         <div class="item">
                                             <img src="images/product-images/250ml/762749_rear.jpg" alt="">
                                         </div>
                                         
                                     </div>
-                                    <div class="slick-slider">
-                                        <div class="item">
-                                            <img src="images/product-images/500ml/198876_bpfv.jpg" alt="">
-                                        </div>
+                                    <div class="slick-slider active">
                                         <div class="item">
                                             <img src="images/product-images/500ml/198876_front.jpg" alt="">
                                         </div>
+                                        <div class="item">
+                                            <img src="images/product-images/500ml/198876_bpfv.jpg" alt="">
+                                        </div>
+                                       
                                         <div class="item">
                                             <img src="images/product-images/500ml/198876_rear.jpg" alt="">
                                         </div>
@@ -318,6 +311,7 @@
                                         </div>
                                         
                                     </div>
+                                   
                                 </div>
                                 <div class="calc-result__content">
                                     <h2 class="calc-result__title">
@@ -575,426 +569,431 @@
             
                 <div class="section__shops_box section__shops_box_offline active">
                     <div class="container">
-                        <div class="section__shops_city">
-                            <div id="user-city" class="section__shops_city--name">
-                                Москва
-                            </div>
-                            <div class="section__shops_city--edit">
-                                Выбрать другой город
-                            </div>
-            
-                            <div class="section__shops_city_popup" style="display: none;">
-                               <div class="city_popup-container">
-                                <div class="city__popup-wrapper">
-                                    <div class="section__shops_city_popup_close"></div>
-                                <h2>ВЫБЕРИТЕ ВАШ ГОРОД</h2>
-                                <div class="section__shops_city_popup_search">
-                                    <input
-                                            type="text"
-                                            value=""
-                                            name="s"
-                                            class="section__shops_city_popup_search"
-                                            placeholder="Укажите нужный вам город"
-                                    />
-                                    <script type="text/javascript">
-                                        var searchCityData = [
-                                            {
-                                                name: 'Санкт-Петербург',
-                                                slug: 'sankt-peterburg',
-                                            },
-                                            { name: 'Петрозаводск', slug: 'petrozavodsk' },
-                                            { name: 'Сургут', slug: 'surgut' },
-                                            { name: 'Тюмень', slug: 'tyumen' },
-                                            { name: 'Нижний Тагил', slug: 'nizhnij-tagil' },
-                                            { name: 'Чита', slug: 'chita' },
-                                            { name: 'Уфа', slug: 'ufa' },
-                                            { name: 'Чебоксары', slug: 'cheboksary' },
-                                            { name: 'Серпухов', slug: 'serpuhov' },
-                                            {
-                                                name: 'Нижний Новгород',
-                                                slug: 'nizhnij-novgorod',
-                                            },
-                                            { name: 'Пенза', slug: 'penza' },
-                                            { name: 'Новосибирск', slug: 'novosibirsk' },
-                                            { name: 'Новокузнецк', slug: 'novokuzneczk' },
-                                            { name: 'Омск', slug: 'omsk' },
-                                            { name: 'Пермь', slug: 'perm' },
-                                            {
-                                                name: 'Ростов-на-Дону',
-                                                slug: 'rostov-na-donu',
-                                            },
-                                            { name: 'Тольятти', slug: 'tolyatti' },
-                                            { name: 'Самара', slug: 'samara' },
-                                            { name: 'Тверь', slug: 'tver' },
-                                            { name: 'Тула', slug: 'tula' },
-                                            {
-                                                name: 'Южно-Сахалинск',
-                                                slug: 'yuzhno-sahalinsk',
-                                            },
-                                            { name: 'Хабаровск', slug: 'habarovsk' },
-                                            { name: 'Челябинск', slug: 'chelyabinsk' },
-                                            { name: 'Одинцово', slug: 'odinczovo' },
-                                            { name: 'Реутов', slug: 'reutov' },
-                                            { name: 'Краснодар', slug: 'krasnodar' },
-                                            { name: 'Казань', slug: 'kazan' },
-                                            { name: 'Киров', slug: 'kirov' },
-                                            { name: 'Красноярск', slug: 'krasnoyarsk' },
-                                            { name: 'Краснокамск', slug: 'krasnokamsk' },
-                                            { name: 'Люберцы', slug: 'lyuberczy' },
-                                            { name: 'Иркутск', slug: 'irkutsk' },
-                                            { name: 'Екатеринбург', slug: 'ekaterinburg' },
-                                            { name: 'Воронеж', slug: 'voronezh' },
-                                            { name: 'Ижевск', slug: 'izhevsk' },
-                                            { name: 'Волгоград', slug: 'volgograd' },
-                                            { name: 'Заречный', slug: 'zarechnyj' },
-                                            { name: 'Владивосток', slug: 'vladivostok' },
-                                            { name: 'Владимир', slug: 'vladimir' },
-                                            { name: 'Бердск', slug: 'berdsk' },
-                                            { name: 'Архангельск', slug: 'arhangelsk' },
-                                            { name: 'Биробиджан', slug: 'birobidzhan' },
-                                            { name: 'Домодедово', slug: 'domodedovo' },
-                                            { name: 'Горки-10', slug: 'gorki-10' },
-                                            { name: 'Саратов', slug: 'saratov' },
-                                            { name: 'Москва', slug: 'moskva' },
-                                        ];
-                                    </script>
-                                    <div
-                                            class="section__shops_city_popup_search_result"
-                                            style="display: none;"
-                                    ></div>
+                        <div class="section__shops-head d-flex justify-conent-between align-items-center">
+                            <p class="section-shops-desc">
+                                Найдите ближайший к вам магазин товаров
+                            </p>
+                            <div class="section__shops_city">
+                                <div id="user-city" class="section__shops_city--name">
+                                    Москва
                                 </div>
-                                <ul class="section__shops_city_popup_ul">
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Москва"
-                                            data-city-slug="samara"
-                                    >
-                                        Москва
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Санкт-Петербург"
-                                            data-city-slug="sankt-peterburg"
-                                    >
-                                        Санкт-Петербург
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Екатеринбург"
-                                            data-city-slug="ekaterinburg"
-                                    >
-                                        Екатеринбург
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Новосибирск"
-                                            data-city-slug="novosibirsk"
-                                    >
-                                        Новосибирск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Нижний Новгород"
-                                            data-city-slug="nizhnij-novgorod"
-                                    >
-                                        Нижний Новгород
-                                    </li>
-                                </ul>
-                                <ul class="section__shops_city_popup_ul">
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Петрозаводск"
-                                            data-city-slug="petrozavodsk"
-                                    >
-                                        Петрозаводск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Сургут"
-                                            data-city-slug="surgut"
-                                    >
-                                        Сургут
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Тюмень"
-                                            data-city-slug="tyumen"
-                                    >
-                                        Тюмень
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Нижний Тагил"
-                                            data-city-slug="nizhnij-tagil"
-                                    >
-                                        Нижний Тагил
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Чита"
-                                            data-city-slug="chita"
-                                    >
-                                        Чита
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Уфа"
-                                            data-city-slug="ufa"
-                                    >
-                                        Уфа
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Чебоксары"
-                                            data-city-slug="cheboksary"
-                                    >
-                                        Чебоксары
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Серпухов"
-                                            data-city-slug="serpuhov"
-                                    >
-                                        Серпухов
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Пенза"
-                                            data-city-slug="penza"
-                                    >
-                                        Пенза
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Новокузнецк"
-                                            data-city-slug="novokuzneczk"
-                                    >
-                                        Новокузнецк
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Омск"
-                                            data-city-slug="omsk"
-                                    >
-                                        Омск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Пермь"
-                                            data-city-slug="perm"
-                                    >
-                                        Пермь
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Ростов-на-Дону"
-                                            data-city-slug="rostov-na-donu"
-                                    >
-                                        Ростов-на-Дону
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Тольятти"
-                                            data-city-slug="tolyatti"
-                                    >
-                                        Тольятти
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Самара"
-                                            data-city-slug="samara"
-                                    >
-                                        Самара
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Тверь"
-                                            data-city-slug="tver"
-                                    >
-                                        Тверь
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Тула"
-                                            data-city-slug="tula"
-                                    >
-                                        Тула
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Южно-Сахалинск"
-                                            data-city-slug="yuzhno-sahalinsk"
-                                    >
-                                        Южно-Сахалинск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Хабаровск"
-                                            data-city-slug="habarovsk"
-                                    >
-                                        Хабаровск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Челябинск"
-                                            data-city-slug="chelyabinsk"
-                                    >
-                                        Челябинск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Одинцово"
-                                            data-city-slug="odinczovo"
-                                    >
-                                        Одинцово
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Реутов"
-                                            data-city-slug="reutov"
-                                    >
-                                        Реутов
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Краснодар"
-                                            data-city-slug="krasnodar"
-                                    >
-                                        Краснодар
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Казань"
-                                            data-city-slug="kazan"
-                                    >
-                                        Казань
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Киров"
-                                            data-city-slug="kirov"
-                                    >
-                                        Киров
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Красноярск"
-                                            data-city-slug="krasnoyarsk"
-                                    >
-                                        Красноярск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Краснокамск"
-                                            data-city-slug="krasnokamsk"
-                                    >
-                                        Краснокамск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Люберцы"
-                                            data-city-slug="lyuberczy"
-                                    >
-                                        Люберцы
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Иркутск"
-                                            data-city-slug="irkutsk"
-                                    >
-                                        Иркутск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Воронеж"
-                                            data-city-slug="voronezh"
-                                    >
-                                        Воронеж
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Ижевск"
-                                            data-city-slug="izhevsk"
-                                    >
-                                        Ижевск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Волгоград"
-                                            data-city-slug="volgograd"
-                                    >
-                                        Волгоград
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Заречный"
-                                            data-city-slug="zarechnyj"
-                                    >
-                                        Заречный
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Владивосток"
-                                            data-city-slug="vladivostok"
-                                    >
-                                        Владивосток
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Владимир"
-                                            data-city-slug="vladimir"
-                                    >
-                                        Владимир
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Бердск"
-                                            data-city-slug="berdsk"
-                                    >
-                                        Бердск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Архангельск"
-                                            data-city-slug="arhangelsk"
-                                    >
-                                        Архангельск
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Биробиджан"
-                                            data-city-slug="birobidzhan"
-                                    >
-                                        Биробиджан
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Домодедово"
-                                            data-city-slug="domodedovo"
-                                    >
-                                        Домодедово
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Горки-10"
-                                            data-city-slug="gorki-10"
-                                    >
-                                        Горки-10
-                                    </li>
-                                    <li
-                                            class="section__shops_city_ul_item"
-                                            data-city="Саратов"
-                                            data-city-slug="saratov"
-                                    >
-                                        Саратов
-                                    </li>
-                                </ul>
+                                <div class="section__shops_city--edit">
+                                    Выбрать другой город
                                 </div>
-                               </div>
+                
+                                <div class="section__shops_city_popup" style="display: none;">
+                                   <div class="city_popup-container">
+                                    <div class="city__popup-wrapper">
+                                        <div class="section__shops_city_popup_close"></div>
+                                    <h2>ВЫБЕРИТЕ ВАШ ГОРОД</h2>
+                                    <div class="section__shops_city_popup_search">
+                                        <input
+                                                type="text"
+                                                value=""
+                                                name="s"
+                                                class="section__shops_city_popup_search"
+                                                placeholder="Укажите нужный вам город"
+                                        />
+                                        <script type="text/javascript">
+                                            var searchCityData = [
+                                                {
+                                                    name: 'Санкт-Петербург',
+                                                    slug: 'sankt-peterburg',
+                                                },
+                                                { name: 'Петрозаводск', slug: 'petrozavodsk' },
+                                                { name: 'Сургут', slug: 'surgut' },
+                                                { name: 'Тюмень', slug: 'tyumen' },
+                                                { name: 'Нижний Тагил', slug: 'nizhnij-tagil' },
+                                                { name: 'Чита', slug: 'chita' },
+                                                { name: 'Уфа', slug: 'ufa' },
+                                                { name: 'Чебоксары', slug: 'cheboksary' },
+                                                { name: 'Серпухов', slug: 'serpuhov' },
+                                                {
+                                                    name: 'Нижний Новгород',
+                                                    slug: 'nizhnij-novgorod',
+                                                },
+                                                { name: 'Пенза', slug: 'penza' },
+                                                { name: 'Новосибирск', slug: 'novosibirsk' },
+                                                { name: 'Новокузнецк', slug: 'novokuzneczk' },
+                                                { name: 'Омск', slug: 'omsk' },
+                                                { name: 'Пермь', slug: 'perm' },
+                                                {
+                                                    name: 'Ростов-на-Дону',
+                                                    slug: 'rostov-na-donu',
+                                                },
+                                                { name: 'Тольятти', slug: 'tolyatti' },
+                                                { name: 'Самара', slug: 'samara' },
+                                                { name: 'Тверь', slug: 'tver' },
+                                                { name: 'Тула', slug: 'tula' },
+                                                {
+                                                    name: 'Южно-Сахалинск',
+                                                    slug: 'yuzhno-sahalinsk',
+                                                },
+                                                { name: 'Хабаровск', slug: 'habarovsk' },
+                                                { name: 'Челябинск', slug: 'chelyabinsk' },
+                                                { name: 'Одинцово', slug: 'odinczovo' },
+                                                { name: 'Реутов', slug: 'reutov' },
+                                                { name: 'Краснодар', slug: 'krasnodar' },
+                                                { name: 'Казань', slug: 'kazan' },
+                                                { name: 'Киров', slug: 'kirov' },
+                                                { name: 'Красноярск', slug: 'krasnoyarsk' },
+                                                { name: 'Краснокамск', slug: 'krasnokamsk' },
+                                                { name: 'Люберцы', slug: 'lyuberczy' },
+                                                { name: 'Иркутск', slug: 'irkutsk' },
+                                                { name: 'Екатеринбург', slug: 'ekaterinburg' },
+                                                { name: 'Воронеж', slug: 'voronezh' },
+                                                { name: 'Ижевск', slug: 'izhevsk' },
+                                                { name: 'Волгоград', slug: 'volgograd' },
+                                                { name: 'Заречный', slug: 'zarechnyj' },
+                                                { name: 'Владивосток', slug: 'vladivostok' },
+                                                { name: 'Владимир', slug: 'vladimir' },
+                                                { name: 'Бердск', slug: 'berdsk' },
+                                                { name: 'Архангельск', slug: 'arhangelsk' },
+                                                { name: 'Биробиджан', slug: 'birobidzhan' },
+                                                { name: 'Домодедово', slug: 'domodedovo' },
+                                                { name: 'Горки-10', slug: 'gorki-10' },
+                                                { name: 'Саратов', slug: 'saratov' },
+                                                { name: 'Москва', slug: 'moskva' },
+                                            ];
+                                        </script>
+                                        <div
+                                                class="section__shops_city_popup_search_result"
+                                                style="display: none;"
+                                        ></div>
+                                    </div>
+                                    <ul class="section__shops_city_popup_ul">
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Москва"
+                                                data-city-slug="samara"
+                                        >
+                                            Москва
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Санкт-Петербург"
+                                                data-city-slug="sankt-peterburg"
+                                        >
+                                            Санкт-Петербург
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Екатеринбург"
+                                                data-city-slug="ekaterinburg"
+                                        >
+                                            Екатеринбург
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Новосибирск"
+                                                data-city-slug="novosibirsk"
+                                        >
+                                            Новосибирск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Нижний Новгород"
+                                                data-city-slug="nizhnij-novgorod"
+                                        >
+                                            Нижний Новгород
+                                        </li>
+                                    </ul>
+                                    <ul class="section__shops_city_popup_ul">
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Петрозаводск"
+                                                data-city-slug="petrozavodsk"
+                                        >
+                                            Петрозаводск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Сургут"
+                                                data-city-slug="surgut"
+                                        >
+                                            Сургут
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Тюмень"
+                                                data-city-slug="tyumen"
+                                        >
+                                            Тюмень
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Нижний Тагил"
+                                                data-city-slug="nizhnij-tagil"
+                                        >
+                                            Нижний Тагил
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Чита"
+                                                data-city-slug="chita"
+                                        >
+                                            Чита
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Уфа"
+                                                data-city-slug="ufa"
+                                        >
+                                            Уфа
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Чебоксары"
+                                                data-city-slug="cheboksary"
+                                        >
+                                            Чебоксары
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Серпухов"
+                                                data-city-slug="serpuhov"
+                                        >
+                                            Серпухов
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Пенза"
+                                                data-city-slug="penza"
+                                        >
+                                            Пенза
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Новокузнецк"
+                                                data-city-slug="novokuzneczk"
+                                        >
+                                            Новокузнецк
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Омск"
+                                                data-city-slug="omsk"
+                                        >
+                                            Омск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Пермь"
+                                                data-city-slug="perm"
+                                        >
+                                            Пермь
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Ростов-на-Дону"
+                                                data-city-slug="rostov-na-donu"
+                                        >
+                                            Ростов-на-Дону
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Тольятти"
+                                                data-city-slug="tolyatti"
+                                        >
+                                            Тольятти
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Самара"
+                                                data-city-slug="samara"
+                                        >
+                                            Самара
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Тверь"
+                                                data-city-slug="tver"
+                                        >
+                                            Тверь
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Тула"
+                                                data-city-slug="tula"
+                                        >
+                                            Тула
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Южно-Сахалинск"
+                                                data-city-slug="yuzhno-sahalinsk"
+                                        >
+                                            Южно-Сахалинск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Хабаровск"
+                                                data-city-slug="habarovsk"
+                                        >
+                                            Хабаровск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Челябинск"
+                                                data-city-slug="chelyabinsk"
+                                        >
+                                            Челябинск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Одинцово"
+                                                data-city-slug="odinczovo"
+                                        >
+                                            Одинцово
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Реутов"
+                                                data-city-slug="reutov"
+                                        >
+                                            Реутов
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Краснодар"
+                                                data-city-slug="krasnodar"
+                                        >
+                                            Краснодар
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Казань"
+                                                data-city-slug="kazan"
+                                        >
+                                            Казань
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Киров"
+                                                data-city-slug="kirov"
+                                        >
+                                            Киров
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Красноярск"
+                                                data-city-slug="krasnoyarsk"
+                                        >
+                                            Красноярск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Краснокамск"
+                                                data-city-slug="krasnokamsk"
+                                        >
+                                            Краснокамск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Люберцы"
+                                                data-city-slug="lyuberczy"
+                                        >
+                                            Люберцы
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Иркутск"
+                                                data-city-slug="irkutsk"
+                                        >
+                                            Иркутск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Воронеж"
+                                                data-city-slug="voronezh"
+                                        >
+                                            Воронеж
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Ижевск"
+                                                data-city-slug="izhevsk"
+                                        >
+                                            Ижевск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Волгоград"
+                                                data-city-slug="volgograd"
+                                        >
+                                            Волгоград
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Заречный"
+                                                data-city-slug="zarechnyj"
+                                        >
+                                            Заречный
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Владивосток"
+                                                data-city-slug="vladivostok"
+                                        >
+                                            Владивосток
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Владимир"
+                                                data-city-slug="vladimir"
+                                        >
+                                            Владимир
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Бердск"
+                                                data-city-slug="berdsk"
+                                        >
+                                            Бердск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Архангельск"
+                                                data-city-slug="arhangelsk"
+                                        >
+                                            Архангельск
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Биробиджан"
+                                                data-city-slug="birobidzhan"
+                                        >
+                                            Биробиджан
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Домодедово"
+                                                data-city-slug="domodedovo"
+                                        >
+                                            Домодедово
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Горки-10"
+                                                data-city-slug="gorki-10"
+                                        >
+                                            Горки-10
+                                        </li>
+                                        <li
+                                                class="section__shops_city_ul_item"
+                                                data-city="Саратов"
+                                                data-city-slug="saratov"
+                                        >
+                                            Саратов
+                                        </li>
+                                    </ul>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div  class="section__shops_city_popup_overlay"  style="display: none;"></div>
                             </div>
-                            <div  class="section__shops_city_popup_overlay"  style="display: none;"></div>
                         </div>
-                        <!-- <div class="section__shops_filter">
+                        <div class="section__shops_filter">
                             <div class="section__shops_filter_search">
                                 <input
                                         type="text"
@@ -1019,7 +1018,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
             
                         <div id="shops-box-list" class="section__shops_box--list" style="display: none">
                             <div class="container">
@@ -4371,11 +4370,13 @@
        
         <script src="js/slick.min.js"></script>
         <script src="js/wow.min.js"></script>
+        <script src="js/velocity.min.js"></script>
         <script src="js/script.js"></script>
         <script>
              new WOW().init();
         </script>
         <script src="./js/dose_calc.js"></script>
+       
         <script>
             const slider_items = [...document.querySelectorAll(".slick-slider")];
             const sliders = {
