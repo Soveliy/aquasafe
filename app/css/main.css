@@ -104,6 +104,36 @@
   visibility: hidden;
 }
 
+.arcticmodal-overlay {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 0.9 !important;
+}
+
+.b-modal {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 71, 122, 0.15);
+          box-shadow: 0px 0px 20px 0px rgba(0, 71, 122, 0.15);
+  background-color: #fff;
+}
+
+.b-modal .substance__elem {
+  text-align: center;
+}
+
+.b-modal .arcticmodal-close {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: url(../images/close-icon.png) no-repeat center center;
+  background-size: contain;
+}
+
 .section-title {
   font-size: 48px;
   line-height: 54px;
@@ -132,9 +162,9 @@
 }
 
 .header__logo {
-  width: 244px;
-  height: 112px;
-  margin: 0 auto 192px;
+  width: 200px;
+  height: 100px;
+  margin: -10px auto 180px;
 }
 
 .header__logo a {
@@ -421,6 +451,7 @@
 
 .calc-info__title b {
   font-size: 48px;
+  font-weight: 400;
 }
 
 .calc-info__text {
@@ -640,7 +671,7 @@
 
 .calc-result__button {
   max-width: 140px;
-  display: block;
+  display: none;
   width: 100%;
   margin-top: 35px;
   font-size: 16px;
@@ -655,6 +686,10 @@
   transition: .3s;
   text-align: center;
   text-decoration: none !important;
+}
+
+.calc-result__button.active {
+  display: block;
 }
 
 .calc-result__button:hover {
@@ -699,11 +734,9 @@
   height: 9px;
   width: 9px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 9px #d0dbe4;
-          box-shadow: 0 0 0 9px #d0dbe4;
   background-color: #00477a;
   left: 14px;
-  top: 11px;
+  top: 10px;
 }
 
 .instructions__item + .instructions__item {
@@ -1328,7 +1361,7 @@
 
 @media screen and (max-width: 1440px) and (min-width: 1025px) and (min-height: 600px) {
   .header__logo {
-    margin: 0 auto 15px;
+    margin: -11px auto 80px;
   }
   .header .inner {
     max-width: 1112px;
@@ -1539,9 +1572,8 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .section-title, .header__text, .calc-result__title, .calc__label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+  .calc-result__buttons {
+    width: 100%;
   }
   .btn-load {
     margin: 20px auto;
@@ -1563,7 +1595,7 @@
     line-height: 25px;
   }
   .header__logo {
-    margin: 0 auto 60px;
+    margin: -11px auto 60px;
   }
   .header .inner {
     padding: 0 20px;
@@ -1943,7 +1975,7 @@
   .header__logo {
     width: 180px;
     height: 83px;
-    margin: 0 auto 30px;
+    margin: -9px auto 30px;
   }
   .header__aqv {
     margin: 30px auto 0;
@@ -2110,8 +2142,8 @@
     margin-top: -170px;
   }
   .section-title, .header__text {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 26px;
+    line-height: 32px;
   }
   .section-desc {
     font-size: 17px;
@@ -2217,6 +2249,8 @@
     font-size: 17px;
     line-height: 20px;
     max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .instructions {
     padding: 50px 0;
@@ -2234,5 +2268,12 @@
   .footer__text {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .do-not-needed .section-title {
+    max-width: 290px;
+    margin: 0 auto;
   }
 }

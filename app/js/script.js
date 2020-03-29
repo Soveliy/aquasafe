@@ -9,7 +9,22 @@ $('.calc-result__close').on('click', function() {
 });
 
 
-$(".substance__item").hover(function(){
+$("#chloramine").click(function(){
+    $("#chloramine__info").arcticmodal();
+  });
+  $("#zink").click(function(){
+    $("#zink__info").arcticmodal();
+  });
+  $("#chlorine").click(function(){
+    $("#chlorine__info").arcticmodal();
+  });
+  $("#plumbum").click(function(){
+    $("#plumbum__info").arcticmodal();
+  });
+  $("#cuprum").click(function(){
+    $("#cuprum__info").arcticmodal();
+  });
+$(".on__desktop .substance__item").hover(function(){
     $(this).children().next().next().delay(100).toggle(300);
     $(this).toggleClass("zIndex")
 });
